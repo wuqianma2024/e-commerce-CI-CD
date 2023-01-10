@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
     <script type="text/javascript">
         var user = '{{request.user}}';
         function getToken(name) {
@@ -46,11 +47,11 @@
     </script>
 
 
-    <title>Ecom</title>
+    <title>SHARE TO EARN</title>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{% url 'store' %}">Ecom</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -75,6 +76,13 @@
 
         </div>
     </nav>
+    <header class="bg-dark">
+        <div class="container">
+            <h1>---------------</h1>
+            <h1> Share to Earn </h1>
+            <h1>---------------</h1>
+        </div>
+    </header>
 
     <hr>
 
@@ -84,6 +92,8 @@
         {% endblock content %}
 
     </div>
+
+
 
 
 
