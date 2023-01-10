@@ -1,0 +1,18 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="row">
+        {% for link in links %}
+        <div class="col-lg-2">
+            <div class="box-element product">
+                {{ link.link|safe}}
+                <a class="btn btn-outline-success" href="{{link.share|safe}}">Share</a>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+
+{% endblock content %}

@@ -18,8 +18,22 @@ def store(request):
     items = data['items'] 
 
     products = Product.objects.all()
+
+
     context={'products':products,'cartItems':cartItems}
     return render(request,'store/store.html',context)
+
+def affiliate(request):
+    data=cartData(request)
+    cartItems = data['cartItems']
+    order = data['order']
+    items = data['items'] 
+
+    links = amazonlink.objects.all()
+    context={'links':links,'cartItems':cartItems}
+    return render(request,'store/amazon.html',context)
+
+
 
 def cart(request):
 

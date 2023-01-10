@@ -95,4 +95,16 @@ class ShippingAddress(models.Model):
 
     def __str__(self):
         return self.address
+
+
+class amazonlink(models.Model):
+    name = models.CharField(max_length=200)
+    link = models.CharField(max_length=1000,null=False)
+    share = models.CharField(max_length=200,null=False)
+    
+
+    def __str__(self):
+        return self.link
+
+
     
