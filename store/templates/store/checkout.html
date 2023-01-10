@@ -95,6 +95,7 @@
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details){
                     alert('Transaction completed by ' + details.payer.anme.given_name + '!');
+                    
                 }); 
             }
 
@@ -123,15 +124,16 @@
 
         var form = document.getElementById('form')
         form.addEventListener('submit',function(e){
-            e.preventDefault()
-            console.log('Form submitted')
-            document.getElementById('form-button').classList.add("hidden");
-            document.getElementById('payment-info').classList.remove("hidden");
+        e.preventDefault()
+        console.log('Form submitted')
+        document.getElementById('form-button').classList.add("hidden");
+        document.getElementById('payment-info').classList.remove("hidden");
         })
-
+/*
         document.getElementById('make-payment').addEventListener('click', function(e){
             submitFormData()
         })
+*/
 
         function submitFormData(){
             console.log('Payment button clicked')
@@ -166,7 +168,7 @@
             console.log('User Info:',userFormData)
 
             var url = "/process_order/"
-            fetch(url,{
+            fetch(url, {
                 method: 'POST',
                 headers:{
                     'Content-Type':'application/json',
@@ -184,7 +186,7 @@
                 cart = {}
                 document.cookie = 'cart=' + JSON.stringify(cart) + ";domain=;path=/"
 
-                window.location.href = "{% url 'store' %}"
+                //window.location.href = "{% url 'store' %}"
 
             })
         }
