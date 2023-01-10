@@ -52,7 +52,7 @@ class Order(models.Model):
             if i.product.digital ==False:
                 shipping = True
         return shipping
-        
+
 
 
     
@@ -60,6 +60,7 @@ class Order(models.Model):
     def get_cart_total(self):
         orderitems = self.orderitem_set.all()
         total=sum([item.get_total for item in orderitems])
+        total=round(total,2)
         return total
 
     @property
@@ -79,6 +80,7 @@ class OrderItem(models.Model):
     @property
     def get_total(self):
         total=self.product.price*self.quantity
+        total=round(total,2)
         return total
 
 
