@@ -7,7 +7,15 @@ from .utils import cookieCart,cartData,guestOrder
 
 
 
+def frontpage(request):
+    context={}
+    return render(request,'store/frontpage.html',context)
 
+
+def blog(request):
+    posts=Post.objects.all()
+    context={'posts':posts}
+    return render(request,'store/blog.html',context)
 
 
 def store(request):

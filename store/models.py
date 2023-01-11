@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.conf import settings
+
 
 
 # Create your models here.
@@ -106,5 +108,27 @@ class amazonlink(models.Model):
     def __str__(self):
         return self.link
 
+class Post(models.Model):
+    author = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+    title=models.CharField(max_length=200)
+    text=models.TextField()
+    created_data=models.DateTimeField(blank=True,null=True)
+    image = models.ImageField(null=True,blank=True)
 
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
+    
+    @property
+    def imageURL(self):
+        try:
+            url=self.image.url
+        except:
+            url=''
+        return url
+    
+    
+    def __str__(self):
+        return self.title
+    
     
