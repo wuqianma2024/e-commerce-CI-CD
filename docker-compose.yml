@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: ecommerce-web
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_DEBUG=True # Set to False in production
+
+# Uncomment the lines below for future possible add-on
+#  db:
+#    image: postgres
+#    environment:
+#      - POSTGRES_DB=yourdbname
+#      - POSTGRES_USER=yourdbuser
+#      - POSTGRES_PASSWORD=yourdbpassword
+#    volumes:
+#      - postgres_data:/var/lib/postgresql/data
+
+# Uncomment for other services like Redis
+#  redis:
+#    image: redis
+
+# Volumes for persistent data
+# volumes:
+#   postgres_data:
