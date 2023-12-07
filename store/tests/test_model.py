@@ -1,6 +1,7 @@
+from django.utils import timezone
 from django.test import TestCase
 from django.contrib.auth.models import User
-from store.models import Customer, Product, Order,OrderItem
+from store.models import Customer, Product, Order,OrderItem,ShippingAddress,Post
 
 class CustomerModelTest(TestCase):
 
@@ -31,7 +32,7 @@ class CustomerModelTest(TestCase):
 
 
 class ProductModelTest(TestCase):
-    
+
     # set up a method for create a product instance to be tested
     def setUp(self):
         Product.objects.create(name="Test Product",price=9.99)
@@ -89,6 +90,45 @@ class OrderModelTest(TestCase):
         order=Order.objects.first()
         self.assertEqual(order.get_cart_items,2)
 
+
+
+class OrderItemModelTest(TestCase):
+    # Setting up necessary objects for OrderItem tests.
+    # This includes creating a Product and an Order, and then an OrderItem linking the two.
+    def setUp(self):
+        product = Product.objects.create(name="Test Product", price=10.00)
+        order = Order.objects.create()
+        OrderItem.objects.create(product=product, order=order, quantity=3)
+
+    def test_orderitem_creation(self):
+        #check if the right quantity
+        order_item = OrderItem.objects.first()
+        self.assertEqual(order_item.quantity, 3)
+
+    def test_get_total(self):
+        #check if the price total is correct
+        order_item = OrderItem.objects.first()
+        self.assertEqual(order_item.get_total, 30.00)
+
+
+
+class ShippingAddressModelTest(TestCase):
+
+    # This includes creating a Customer and an Order, and then a ShippingAddress for that order.
+    def setUp(self):
+        customer = Customer.objects.create(name="Test Customer", email="testcustomer@example.com")
+        order = Order.objects.create(customer=customer)
+        ShippingAddress.objects.create(customer=customer, order=order, address="Test Address", city="Test City", state="TS", zipcode="66666")
+
+    #check if the correct city
+    def test_shippingaddress_creation(self):
+        address = ShippingAddress.objects.first()
+        self.assertEqual(address.city, "Test City")
+    
+    # check if it return the correct address
+    def test_shippingaddress_str(self):
+        address = ShippingAddress.objects.first()
+        self.assertEqual(str(address), "Test Address")
 
 
 
