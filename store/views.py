@@ -116,4 +116,4 @@ def processOrder(request):
             zipcode=data['shipping']['zipcode'],
         )
     
-    return JsonResponse('Payment submitted',safe=Flase)
+    return JsonResponse('Payment submitted',safe=False)
