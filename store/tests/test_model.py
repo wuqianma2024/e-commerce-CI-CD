@@ -3,6 +3,13 @@ from django.test import TestCase
 from django.contrib.auth.models import User
 from store.models import Customer, Product, Order,OrderItem,ShippingAddress,Post
 
+
+"""
+This is model test for database function unit test.
+"""
+
+
+
 class CustomerModelTest(TestCase):
 
     # setUp runs before each test method to set up environment
