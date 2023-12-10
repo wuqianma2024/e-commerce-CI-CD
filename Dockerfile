@@ -18,8 +18,8 @@ RUN rm chrome-linux64.zip
 
 # Install ChromeDriver
 RUN wget -q https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6099.71/linux64/chromedriver-linux64.zip
-RUN unzip chromedriver_linux64.zip -d /usr/bin
-RUN rm chromedriver_linux64.zip
+RUN unzip chromedriver-linux64.zip -d /usr/bin
+RUN rm chromedriver-linux64.zip
 
 # Set the working directory in the container
 WORKDIR /app
