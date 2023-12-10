@@ -12,7 +12,7 @@ class MyE2ETest(StaticLiveServerTestCase):
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
         options.add_argument('--disable-dev-shm-usage')
-        cls.selenium = webdriver.Chrome(options=options)
+        cls.selenium = webdriver.Chrome()
 
 
         cls.selenium.implicitly_wait(10)
