@@ -39,7 +39,17 @@ Ensures continuous integration and delivery for the project.
 Docker images deployed to GitHub Container Registry, enabling easy version control and distribution.
 
 
-## Setup and Installation
+# Setup and Installation
+For github clone:
+```
+git clone https://github.com/wuqianma2024/e-commerce-CI-CD.git
+cd e-commerce-CI-CD
+docker-compose up --build
+```
+access the application from your webbroser:
+```http://localhost:8000
+```
 
+git clone 
 
 Contributing: WUQIAN MA
