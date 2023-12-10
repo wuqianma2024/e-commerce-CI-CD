@@ -4,6 +4,7 @@ services:
   web:
     build: .
     container_name: ecommerce-web
+    image: ghcr.io/wuqianma2024/ecommerce-web:v0.1
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/app
@@ -11,4 +12,3 @@ services:
       - "8000:8000"
     environment:
       - DJANGO_DEBUG=True # Set to False in production
-
