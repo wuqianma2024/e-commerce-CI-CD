@@ -63,6 +63,10 @@ Docker images deployed to GitHub Container Registry, enabling easy version contr
 
 
 
+##### Contributing: WUQIAN MA
+
+#### License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
-Contributing: WUQIAN MA
+
