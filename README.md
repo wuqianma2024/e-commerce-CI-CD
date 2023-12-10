@@ -46,16 +46,18 @@ If you would like to use github clone:
     ```
 
 Or you could choose to pull from docker image:
+    ```
     docker pull ghcr.io/wuqianma2024/ecommerce-web:v0.1
-
+    ```
 Then run it:
-
+    ```
     cd e-commerce-CI-CD
     docker-compose up --build
-
+    ```
 After running, access the application from your browser:
+    ```
     http://localhost:8000
-
+    ```
 
 
 
