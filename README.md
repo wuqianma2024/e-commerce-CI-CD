@@ -40,16 +40,20 @@ Docker images deployed to GitHub Container Registry, enabling easy version contr
 
 
 # Setup and Installation
-For github clone:
+If you would like to use github clone:
 ```
 git clone https://github.com/wuqianma2024/e-commerce-CI-CD.git
 cd e-commerce-CI-CD
 docker-compose up --build
 ```
-access the application from your webbroser:
-```http://localhost:8000
+Or you could pull docker image to run:
+```
 ```
 
-git clone 
+
+After running, access the application from your browser:
+```http://localhost:8000```
+
+
 
 Contributing: WUQIAN MA
