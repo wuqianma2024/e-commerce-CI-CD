@@ -1,16 +1,12 @@
-# masterproject
+# Web Application Project - Session 4 Graded TP -Machine learning in Production
 
-Web Application Project - Session 4 Graded TP
-Deadline
-
-07/12/2023 - 23:59
 Overview
 
-This project is a comprehensive web application encompassing backend development, frontend interfaces, and database integration. It's a complete showcase demonstrating the integration of multiple technologies including Docker, comprehensive testing strategies, and CI/CD automation using GitHub Actions.
-Functional Requirements
+This project is a e-commerce web application encompassing backend development, frontend interfaces, and database integration. It's a complete showcase demonstrating the integration of multiple technologies including Docker, comprehensive testing strategies, and CI/CD automation using GitHub Actions.
+
 Backend Development
 
-    Language & Framework: Python with a choice of Django.
+    Language & Framework: Python & Django.
     Responsible for handling business logic, data processing, and server-side operations.
 
 Frontend Development
