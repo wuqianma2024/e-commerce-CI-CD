@@ -58,6 +58,8 @@ Docker images deployed to GitHub Container Registry, enabling easy version contr
  
     http://localhost:8000
     
+##### If it works well, you should see this page:
+<img width="1906" alt="image" src="https://github.com/wuqianma2024/e-commerce-CI-CD/assets/115680054/e57f0d0e-6a9b-43bb-b248-3285f9f6d3e8">
 
 
 
