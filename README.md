@@ -40,21 +40,21 @@ Docker images deployed to GitHub Container Registry, enabling easy version contr
 
 
 # Setup and Installation
-If you would like to use github clone:
+##### If you would like to use github clone:
     ```
     git clone https://github.com/wuqianma2024/e-commerce-CI-CD.git
     ```
 
-Or you could choose to pull from docker image:
+##### Or you could choose to pull from docker image:
     ```
     docker pull ghcr.io/wuqianma2024/ecommerce-web:v0.1
     ```
-Then run it:
+##### Then run it:
     ```
     cd e-commerce-CI-CD
     docker-compose up --build
     ```
-After running, access the application from your browser:
+##### After running, access the application from your browser:
     ```
     http://localhost:8000
     ```
