@@ -2,3 +2,4 @@ Django
 Pillow
 pytest 
 pytest-django
+selenium
