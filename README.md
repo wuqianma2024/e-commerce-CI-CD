@@ -21,7 +21,9 @@ This project is a e-commerce web application encompassing backend development, f
 
 ### Testing
 To do the test, at the root library, run:
-    ```pytest```
+    pytest
+or
+    python manage.py test
 
 - Unit tests for component reliability.
 - Integration tests for system cohesiveness.
@@ -40,5 +42,4 @@ Docker images deployed to GitHub Container Registry, enabling easy version contr
 ## Setup and Installation
 
 
-Contributing
-WUQIAN MA
+Contributing: WUQIAN MA
